@@ -1,0 +1,25 @@
+{
+  "name": "rae-ahasa",
+  "version": "1.0.0",
+  "description": "portfolio dedicated for those who adore simplicity",
+  "main": "home.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anojan-s/rae-ahasa.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "anojan sivaranjan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anojan-s/rae-ahasa/issues"
+  },
+  "homepage": "https://github.com/anojan-s/rae-ahasa#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
