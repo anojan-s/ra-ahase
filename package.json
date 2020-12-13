@@ -2,7 +2,7 @@
   "name": "rae-ahasa",
   "version": "1.0.0",
   "description": "portfolio dedicated for those who adore simplicity",
-  "main": "home.html",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
