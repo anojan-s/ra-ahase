@@ -1,0 +1,22 @@
+//single scss file to control color switching for different themes
+//by default dark theme will be selected
+:root {
+    --text-primary: #{$memory-lane};
+    --text-secondary: #{$grouse};
+    --bg-primary: #{$ink};
+    --bg-secondary: #{$lead};
+    --icon-primary: #{$memory-lane};
+  }
+
+.light {
+    --text-primary: #{$vulcan};
+    --text-secondary: #{$bunker};
+    --bg-primary: #{$spring-rain};
+    --bg-secondary: #{$white};
+    --icon-primary: #{$bunker};
+}
+
+//handling theme transition gracefully
+* {
+    transition: all .15s ease;
+  }
