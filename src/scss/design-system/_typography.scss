@@ -43,6 +43,16 @@ body, p{
     line-height: 28px;
     letter-spacing: -0.33px;
     text-align: left;
+
+    @include media-breakpoint-down(mb) {
+        font-family: $font-family-sans-serif;
+        font-style: normal;
+        font-weight: $regular;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.18px;
+        text-align: left;
+    }
 }
 
 .label{
