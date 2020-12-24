@@ -39,24 +39,38 @@ function sassCompile() {
     .pipe(browsersync.reload({ stream: true }));
 }
 
-/**
- * Watch files
- */
+// Javascript Functions
+function jsCompile() {
+  return gulp
+    .src(jsSrcFiles)
+    //.pipe(concat('app.js'))
+    .pipe(gulp.dest(jsDist))
+    .pipe(browsersync.reload({ stream: true }));
+}
+
+function jsBuild() {
+  return gulp
+    .src(jsSrcFiles)
+    //.pipe(concat('app.js'))
+    //.pipe(uglify())
+    .pipe(gulp.dest(jsDist));
+}
+
+// Watch files
 function watchFiles() {
   gulp.watch(scssSrcFiles, sassCompile);
+  gulp.watch(jsSrcFiles, jsCompile);
   gulp.watch([htmlSrcFiles], gulp.series(browserSyncReload));
 }
 
-/**
- * Gulp tasks
- */
+// Gulp tasks
 gulp.task('sassCompile', sassCompile);
+gulp.task('jsCompile', jsCompile);
+gulp.task('jsBuild', jsBuild);
+
+// Gulp build
+gulp.task('build', gulp.parallel(sassCompile, jsBuild));
 
 
-/**
- * Gulp watch
- */
-gulp.task(
-  'default', 
-  gulp.series('sassCompile', gulp.parallel(browserSync, watchFiles))
-);
+// Gulp watch
+gulp.task( 'default', gulp.series('build', gulp.parallel(browserSync, watchFiles)));

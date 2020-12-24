@@ -6878,6 +6878,14 @@ textarea {
   --bg-secondary: #FFFFFF;
   --icon-primary: #727274; }
 
+.dark {
+  --accent: #00B8A7;
+  --text-primary: #C9D1D9;
+  --text-secondary: #8B949E;
+  --bg-primary: #121212;
+  --bg-secondary: #EAEAEC;
+  --icon-primary: #C9D1D9; }
+
 * {
   transition: all .15s ease; }
 

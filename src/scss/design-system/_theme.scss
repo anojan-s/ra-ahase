@@ -7,7 +7,7 @@
     --bg-primary: #{$ink};
     --bg-secondary: #{$lead};
     --icon-primary: #{$memory-lane};
-  }
+}
 
 .light {
     --accent: #{$tiffany};
@@ -16,6 +16,15 @@
     --bg-primary: #{$spring-rain};
     --bg-secondary: #{$white};
     --icon-primary: #{$bunker};
+}
+
+.dark {
+  --accent: #{$tiffany};
+  --text-primary: #{$memory-lane};
+  --text-secondary: #{$grouse};
+  --bg-primary: #{$ink};
+  --bg-secondary: #{$lead};
+  --icon-primary: #{$memory-lane};
 }
 
 //handling theme transition gracefully
