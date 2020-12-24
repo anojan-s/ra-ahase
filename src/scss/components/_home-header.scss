@@ -1,0 +1,35 @@
+//-- Page wide styling
+body {
+    background-color: var(--bg-primary);
+}
+h1 {
+    color: var(--text-primary);
+}
+p {
+    color: var(--text-secondary);
+}
+
+//-- Header
+.header {
+  
+    //__ Header avatar
+    &__avatar {
+        border-radius: 50%;
+
+        @include media-breakpoint-down(mb) {
+            height: 164px;
+            width: 164px;
+        }
+    }
+
+    &__glyphs {
+        display: flex;
+
+        svg{
+            fill: var(--icon-primary);
+        }
+        svg:hover{
+            fill: var(--accent);
+        }
+    }
+}
