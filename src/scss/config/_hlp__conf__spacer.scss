@@ -1,0 +1,10 @@
+//-- Spacer configuration
+$spacer-start:               0;
+$spacer-end:                 40;
+$spacer-unit:                px;
+
+$spacer-important:           true;
+$spacer-arithmetic:          true;
+$spacer-arithmetic-sequence: 4;
+
+$spacer-directions:          (top: t, right: r, bottom: b, left: l);

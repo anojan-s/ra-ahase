@@ -1,0 +1,4 @@
+//-- Spacer
+@include spacer-factory(margin, m, $spacer-start, $spacer-end, $spacer-unit, $spacer-important, $spacer-arithmetic, $spacer-arithmetic-sequence, $spacer-directions);
+
+@include spacer-factory(padding, p, $spacer-start, $spacer-end, $spacer-unit, $spacer-important, $spacer-arithmetic, $spacer-arithmetic-sequence, $spacer-directions);

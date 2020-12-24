@@ -63,3 +63,16 @@ body, p{
     line-height: 22px;
     letter-spacing: -0.13px;
 }
+
+// Hyperlink styles
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color: var(--accent); 
+     text-decoration:underline; 
+     cursor:pointer;  
+}

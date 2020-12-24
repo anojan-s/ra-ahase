@@ -1,6 +1,7 @@
 //single scss file to control color switching for different themes
 //by default dark theme will be selected
 :root {
+    --accent: #{$tiffany};
     --text-primary: #{$memory-lane};
     --text-secondary: #{$grouse};
     --bg-primary: #{$ink};
@@ -9,6 +10,7 @@
   }
 
 .light {
+    --accent: #{$tiffany};
     --text-primary: #{$vulcan};
     --text-secondary: #{$bunker};
     --bg-primary: #{$spring-rain};

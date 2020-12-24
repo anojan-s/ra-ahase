@@ -1,0 +1,98 @@
+@mixin spacer-factory($prop, $alias, $start: 0, $end: 100, $unit: px, $use-important: true, $use-arithmetic: true, $arithmetic-sequence: 1, $directions: (top: t, right: r, bottom: b, left: l)) {
+  $important: if($use-important == true, " !important", "");
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @for $i from $start through $end {
+        @if $use-arithmetic == true {
+          $index: $i * $arithmetic-sequence;
+
+          .#{$alias}#{$infix}-#{$index} {
+            #{$prop}: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}x#{$infix}-#{$index} {
+            #{$prop}-left: #{$index}#{$unit}#{$important};
+            #{$prop}-right: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}y#{$infix}-#{$index} {
+            #{$prop}-top: #{$index}#{$unit}#{$important};
+            #{$prop}-bottom: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}t#{$infix}-#{$index} {
+            #{$prop}-top: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}b#{$infix}-#{$index} {
+            #{$prop}-bottom: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}r#{$infix}-#{$index} {
+            #{$prop}-right: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}l#{$infix}-#{$index} {
+            #{$prop}-left: #{$index}#{$unit}#{$important};
+          }
+
+          // @each $direction, $direction-alias in $directions {
+          //   .#{$alias}#{$direction-alias}#{$infix}-#{$index} {
+          //     #{$prop}-#{$direction}: rem($index)#{$important};
+          //   }
+          // }
+        } @else {
+          $index: $i;
+
+          .#{$alias}#{$infix}-#{$index} {
+            #{$prop}: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}x#{$infix}-#{$index} {
+            #{$prop}-left: #{$index}#{$unit}#{$important};
+            #{$prop}-right: #{$index}#{$unit}#{$important};
+          }
+
+          .#{$alias}y#{$infix}-#{$index} {
+            #{$prop}-top: #{$index}#{$unit}#{$important};
+            #{$prop}-bottom: #{$index}#{$unit}#{$important};
+          }
+
+          @each $direction, $direction-alias in $directions {
+            .#{$alias}#{$direction-alias}#{$infix}-#{$index} {
+              #{$prop}-#{$direction}: #{$index}#{$unit}#{$important};
+            }
+          }
+        }
+      }
+
+      // Some special margin utils
+      .m#{$infix}-auto {
+        margin: auto#{$important};
+      }
+
+      .mt#{$infix}-auto,
+      .my#{$infix}-auto {
+        margin-top: auto#{$important};
+      }
+
+      .mr#{$infix}-auto,
+      .mx#{$infix}-auto {
+        margin-right: auto#{$important};
+      }
+
+      .mb#{$infix}-auto,
+      .my#{$infix}-auto {
+        margin-bottom: auto#{$important};
+      }
+
+      .ml#{$infix}-auto,
+      .mx#{$infix}-auto {
+        margin-left: auto#{$important};
+      }
+    }
+  }
+}
