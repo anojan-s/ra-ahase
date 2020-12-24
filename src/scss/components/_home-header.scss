@@ -1,3 +1,14 @@
+//-- Page wide styling
+body {
+    background-color: var(--bg-primary);
+}
+h1 {
+    color: var(--text-primary);
+}
+p {
+    color: var(--text-secondary);
+}
+
 //-- Header
 .header {
   

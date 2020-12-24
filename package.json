@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/anojan-s/rae-ahasa#readme",
   "devDependencies": {
+    "browser-sync": "^2.26.13",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
   }
