@@ -1,60 +1,62 @@
 'use strict';
 
-var gulp        = require('gulp');
-var browserSync = require('browser-sync').create();
-var sass        = require('gulp-sass');
+// Required gulp plugins
+const gulp         = require('gulp');
+const browsersync  = require('browser-sync').create();
+const sass         = require('gulp-sass');
 
-// Compile sass into CSS & auto-inject into browsers
-gulp.task('sass', function() {
-  return gulp.src(".src/scss/**/*.scss")
-      .pipe(sass())
-      .pipe(gulp.dest("./assets/css"))
-      .pipe(browserSync.stream());
-});
+let   htmlSrcFiles = './**/*.html';
+let   scssSrcFiles = './src/scss/**/*.scss';
+let   jsSrcFiles   = './src/js/*.js';
+let   cssDist      = './assets/css';
+let   jsDist       = './assets/js';
+//let   vendorsDist  = './assets/vendors';
 
-// Static Server + watching scss/html files
-gulp.task('serve', gulp.series('sass' ,function(done) {
-    browserSync.init({
-        server: "."
-    });
-
-    gulp.watch("./src/scss/**/*.scss", ['sass']);
-    gulp.watch("./**/*.html");
-    browserSync.reload();
-    done();
-}));
-
-gulp.task('default', gulp.series('serve'));
-
-
-// Archived code
-/* 
-//required gulp plugins
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-
-//browserSync initialization
-gulp.task('browserSync', function() {
-  browserSync.init({
+// BrowserSync initialization
+function browserSync(done) {
+  browsersync.init({
     server: {
       baseDir: '.'
     },
     open: false,
     notify: false
-  })
-})
-*/
+  });
+  done();
+}
 
-//gulp.task('sass', function(){ 
-  //return gulp.src('./src/scss/**/*.scss')
-  //.pipe(sass().on('error', sass.logError))
-  //.pipe(gulp.dest('./assets/css'))
-  //.pipe(browserSync.stream());
-//});
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
 
-//gulp.task('watch', gulp.series('sass','browserSync', function () {
-  //gulp.watch('./src/scss/**/*.scss', ['sass']);
-  //gulp.watch('./**/*.html', browserSync.reload); 
-  //gulp.watch('./js/**/*.js', browserSync.reload); 
-//})); 
+// CSS/SCSS Functions
+function sassCompile() {
+  return gulp
+    .src(scssSrcFiles)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(cssDist))
+    .pipe(browsersync.reload({ stream: true }));
+}
+
+/**
+ * Watch files
+ */
+function watchFiles() {
+  gulp.watch(scssSrcFiles, sassCompile);
+  gulp.watch([htmlSrcFiles], gulp.series(browserSyncReload));
+}
+
+/**
+ * Gulp tasks
+ */
+gulp.task('sassCompile', sassCompile);
+
+
+/**
+ * Gulp watch
+ */
+gulp.task(
+  'default', 
+  gulp.series('sassCompile', gulp.parallel(browserSync, watchFiles))
+);
