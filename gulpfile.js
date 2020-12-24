@@ -14,8 +14,8 @@ const rename       = require('gulp-rename');
 let   htmlSrcFiles = './**/*.html';
 let   scssSrcFiles = './src/scss/**/*.scss';
 let   jsSrcFiles   = './src/js/*.js';
-let   cssDist      = './assets/css';
-let   jsDist       = './assets/js';
+let   cssDist      = './dist/assets/css';
+let   jsDist       = './dist/assets/js';
 
 
 // BrowserSync initialization
