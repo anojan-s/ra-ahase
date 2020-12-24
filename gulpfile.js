@@ -4,13 +4,19 @@
 const gulp         = require('gulp');
 const browsersync  = require('browser-sync').create();
 const sass         = require('gulp-sass');
+const concat       = require('gulp-concat');
+const minify       = require('gulp-minify');
+const sourcemaps   = require('gulp-sourcemaps');
+const cleanCss     = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const rename       = require('gulp-rename');
 
 let   htmlSrcFiles = './**/*.html';
 let   scssSrcFiles = './src/scss/**/*.scss';
 let   jsSrcFiles   = './src/js/*.js';
 let   cssDist      = './assets/css';
 let   jsDist       = './assets/js';
-//let   vendorsDist  = './assets/vendors';
+
 
 // BrowserSync initialization
 function browserSync(done) {
@@ -30,30 +36,47 @@ function browserSyncReload(done) {
   done();
 }
 
-// CSS/SCSS Functions
+// Compiling all sass file into css
 function sassCompile() {
   return gulp
     .src(scssSrcFiles)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(cssDist))
-    .pipe(browsersync.reload({ stream: true }));
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: [
+          '> 1%',
+          'last 10 versions',
+          'firefox >= 4',
+          'safari 7',
+          'safari 8',
+          'IE 8',
+          'IE 9',
+          'IE 10',
+          'IE 11'
+        ],
+        cascade: false
+      })
+    )
+    .pipe(cleanCss()) //minifying css
+    .pipe(rename('app.min.css'))
+    .pipe(sourcemaps.write('.', { includeContent: false }))
+    .pipe(gulp.dest(cssDist));
 }
 
-// Javascript Functions
+// Compiling all JS into one js
 function jsCompile() {
   return gulp
     .src(jsSrcFiles)
-    //.pipe(concat('app.js'))
+    .pipe(concat('app.js'))
+    .pipe(minify({
+      ext:{
+          min:'.min.js'
+      },
+      noSource: true
+  }))
     .pipe(gulp.dest(jsDist))
     .pipe(browsersync.reload({ stream: true }));
-}
-
-function jsBuild() {
-  return gulp
-    .src(jsSrcFiles)
-    //.pipe(concat('app.js'))
-    //.pipe(uglify())
-    .pipe(gulp.dest(jsDist));
 }
 
 // Watch files
@@ -66,11 +89,28 @@ function watchFiles() {
 // Gulp tasks
 gulp.task('sassCompile', sassCompile);
 gulp.task('jsCompile', jsCompile);
-gulp.task('jsBuild', jsBuild);
 
 // Gulp build
-gulp.task('build', gulp.parallel(sassCompile, jsBuild));
+gulp.task('compile', gulp.parallel(sassCompile, jsCompile));
+
+// Deafult gulp task
+gulp.task( 'default', gulp.series('compile', gulp.parallel(browserSync, watchFiles)));
 
 
-// Gulp watch
-gulp.task( 'default', gulp.series('build', gulp.parallel(browserSync, watchFiles)));
+
+// Below gulp taks is used to make the css/js compilation without minifying to debug easily
+// this needs to be run manually
+gulp.task('build:css', function () {    
+    return gulp
+    .src(scssSrcFiles)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(cssDist))
+    .pipe(browsersync.reload({ stream: true }));
+});
+
+gulp.task('build:js', function () {    
+  return gulp
+  .src(jsSrcFiles)
+  .pipe(concat('app.js'))
+  .pipe(gulp.dest(jsDist))
+});
