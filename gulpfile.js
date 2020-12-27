@@ -10,19 +10,22 @@ const sourcemaps   = require('gulp-sourcemaps');
 const cleanCss     = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
 
 let   htmlSrcFiles = './**/*.html';
 let   scssSrcFiles = './src/scss/**/*.scss';
 let   jsSrcFiles   = './src/js/*.js';
 let   cssDist      = './dist/assets/css';
 let   jsDist       = './dist/assets/js';
+let   imgSrcFiles  = './dist/assets/images/**/*.png';
+let   imgDist      = './dist/assets/images';
 
 
 // BrowserSync initialization
 function browserSync(done) {
   browsersync.init({
     server: {
-      baseDir: '.'
+      baseDir: './dist'
     },
     open: false,
     notify: false
@@ -113,4 +116,11 @@ gulp.task('build:js', function () {
   .src(jsSrcFiles)
   .pipe(concat('app.js'))
   .pipe(gulp.dest(jsDist))
+});
+
+// Manual image optimizer task
+gulp.task('imagemin', function() {
+  return gulp.src(imgSrcFiles)
+	.pipe(imagemin())
+	.pipe(gulp.dest(imgDist))
 });
