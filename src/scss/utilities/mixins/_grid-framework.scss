@@ -13,8 +13,10 @@
     padding-left: ($gutter / 2);
 
     @include media-breakpoint-down(tb) {
-      padding-right: ($grid-mobile-gutter-width / 2);
-      padding-left: ($grid-mobile-gutter-width / 2);
+      padding-right: 0;
+      padding-left: 0;
+      //padding-right: ($grid-mobile-gutter-width / 2);
+      //padding-left: ($grid-mobile-gutter-width / 2);
     }
   }
 

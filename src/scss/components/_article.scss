@@ -1,0 +1,44 @@
+//-- Page wide styling
+body {
+    background-color: var(--bg-primary);
+}
+h1 {
+    color: var(--text-primary);
+}
+h2 {
+    color: var(--text-primary);
+}
+p {
+    color: var(--text-primary);
+    line-height: 32px;
+}
+
+// Article wrapper
+.article-wrapper {
+    margin: 0 auto;
+}
+
+//-- Article header
+.article {
+  
+    //__ Cover image
+    &__cover {
+        border-radius: 8px;
+
+        @include media-breakpoint-down(mb) {
+            width: calc(100% + 32px);
+            padding-left: -16px;
+        }
+    }
+
+    //__ Title
+    &__title {
+        color: var(--text-primary);
+    }
+
+    //__ Subtitle
+    &__subtitle {
+        color: var(--text-secondary);
+    }
+    
+}
