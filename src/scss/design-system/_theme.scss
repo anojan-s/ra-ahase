@@ -7,6 +7,7 @@
     --bg-primary: #{$ink};
     --bg-secondary: #{$lead};
     --icon-primary: #{$memory-lane};
+    --divider: #{rgba(255, 255, 255, 0.1)};
 }
 
 .light {
@@ -16,16 +17,9 @@
     --bg-primary: #{$spring-rain};
     --bg-secondary: #{$white};
     --icon-primary: #{$bunker};
+    --divider: #{rgba(0, 0, 0, 0.08)};
 }
 
-.dark {
-  --accent: #{$tiffany};
-  --text-primary: #{$memory-lane};
-  --text-secondary: #{$grouse};
-  --bg-primary: #{$ink};
-  --bg-secondary: #{$lead};
-  --icon-primary: #{$memory-lane};
-}
 
 //handling theme transition gracefully
 * {
