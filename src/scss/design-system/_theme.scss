@@ -1,33 +1,39 @@
-//single scss file to control color switching for different themes
-//by default dark theme will be selected
-:root {
+// Default colors
+body {
+  --accent: #{$tiffany};
+  --text-primary: #{$memory-lane};
+  --text-secondary: #{$grouse};
+  --bg-primary: #{$ink};
+  --bg-secondary: #{$lead};
+  --icon-primary: #{$memory-lane}; 
+}
+
+// Setting theme per user OS preference
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  body {
     --accent: #{$tiffany};
     --text-primary: #{$memory-lane};
     --text-secondary: #{$grouse};
     --bg-primary: #{$ink};
     --bg-secondary: #{$lead};
-    --icon-primary: #{$memory-lane};
+    --icon-primary: #{$memory-lane}; 
+  }
 }
 
-.light {
+// Light mode
+@media (prefers-color-scheme: light) {
+  body {
     --accent: #{$tiffany};
     --text-primary: #{$vulcan};
     --text-secondary: #{$bunker};
     --bg-primary: #{$spring-rain};
     --bg-secondary: #{$white};
     --icon-primary: #{$bunker};
-}
-
-.dark {
-  --accent: #{$tiffany};
-  --text-primary: #{$memory-lane};
-  --text-secondary: #{$grouse};
-  --bg-primary: #{$ink};
-  --bg-secondary: #{$lead};
-  --icon-primary: #{$memory-lane};
+  }
 }
 
 //handling theme transition gracefully
 * {
-    transition: all .15s ease;
-  }
+  transition: all .15s ease;
+}
