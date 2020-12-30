@@ -22,6 +22,10 @@
         flex-direction: row;
         align-items: center;
 
+        :hover{
+            cursor: pointer;
+        }
+
         &-text{
             padding-left: 12px;
             font-weight: $semibold;

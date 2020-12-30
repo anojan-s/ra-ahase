@@ -28,7 +28,7 @@
             <div class="container p-tb-0">
                 <div class="navigation--wrapper col-12 col-jmb-10 offset-jmb-1 px-0">
                     <!-- Logo -->
-                    <div class="navigation__logo">
+                    <div class="navigation__logo" onclick="location.href='index.html';">
                         <img alt="Avatar" width="32px" height="32px" src="./assets/images/avatar.png">
                         <p class="navigation__logo-text">Anojan Sivaranjan</p>
                     </div><!-- ./Logo -->
@@ -44,7 +44,10 @@
         </section>
         <!-- Cover image -->
         <div class="col-jmb-8 offset-jmb-2 col-dt-10 offset-dt-1">
-            <img style="height:auto;" alt="Cover image of template article" width="768px" height="400px" class="article__cover" src="./assets/images/clocker/cover.png">
+            <picture>
+                <source srcset="./assets/images/clocker/cover-light.png" media="(prefers-color-scheme: light)">
+                <img style="height:auto;" alt="Clocker article cover" width="768px" height="400px" class="article__cover" src="./assets/images/clocker/cover-dark.png">
+            </picture>
         </div>
         <!-- Article -->
         <div class="container">
@@ -59,14 +62,42 @@
                     <div class="divider"></div>
                     <!-- Article Content -->
                     <div class="py-40">
-                        <p class="pb-40 txt-primary">So it all started with an email to the Abhishek Banthia (creator and developer of Clocker) praising the app and asking if he has any plans to improve the  design and experience of the app. Luckily he had some plans for a design overhaul and some cool new features.</p>
-                        <img class="pb-40"style="height:auto;" alt="Screenshots of clocker on both dark mode and light mode" width="668px" height="500px" src="./assets/images/clocker/clocker-dark-light-screenshot.png">
+                        <!-- Content section 1 -->
+                        <p class="pb-40 txt-primary">So it all started with an email to the <a href="https://twitter.com/n0shake">Abhishek Banthia</a> (creator and developer of <a href="https://apps.apple.com/lk/app/clocker/id1056643111?mt=12">Clocker</a>) praising the app and asking if he has any plans to improve the  design and experience of the app. Luckily he had some plans for a design overhaul and some cool new features.<br><br>So I started off with the goal of<br>• Rebuild the visual language of the app<br>• Add couple of new features in<br>• Learn as much as possible on macOS app design patterns</p>
+                        <!-- Lonely image -->
+                        <picture>
+                            <img class="pb-12" style="height:auto;" alt="Screenshots of clocker on both dark mode and light mode" width="668px" height="500px" src="./assets/images/clocker/clocker-dark-light-screenshot.png">
+                        </picture>
+                        <p class="caption pb-40">Clocker screenshot on both light mode and dark mode</p>
+                        <!-- Content section 2 -->
+                        <h3 class="pb-16">Calendar at a glance</h3>
+                        <picture>
+                            <source srcset="./assets/images/clocker/calendar-light.png" media="(prefers-color-scheme: light)">
+                            <img class="pb-12" style="height:auto;" alt="Screenshots of new calendar feature" width="668px" height="352px" src="./assets/images/clocker/calendar-dark.png">
+                        </picture>
+                        <p class="caption pb-24">New calendar feature</p>
+                        <p class="pb-40 txt-primary">One of the  most requested feature was the ability to see calendar at a glance. This is a big addition and it’ll have ripple effects on other parts of the app, so we took careful consideration on how to implement the feature and its interactions. Our goal here was to keep it simple while providing the necessary information.<br><br>With this addition, Clocker will become the all in one tool to plan and organize your schedule through multiple timezones.</p>
+                        <!-- Content section 3 -->
+                        <h3 class="pb-16">Preferences panel</h3>
+                        <iframe class="mb-24" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="420" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FGRlentmpJblmP93uJpOAwHn8%2FClocker%3Fnode-id%3D72%253A2%26viewport%3D717%252C149%252C0.23692740499973297%26scaling%3Dscale-down-width" allowfullscreen></iframe>
+                        <p class="pb-40 txt-primary">Exisiting preferences panel was not using the system default pattern, which resulted in inconsitent experience across other apps users use every day. We restructured the information architecture of the preferences and designed it from scratch to match the system default pattern.</p>
+                        <!-- Content section 4 -->
+                        <h3 class="pb-24">App icon</h3>
+                        <picture>
+                            <source srcset="./assets/images/clocker/app_icon-light.png" media="(prefers-color-scheme: light)">
+                            <img class="pb-12" style="height:auto;" alt="New Clocker app icon" width="668px" height="400px" src="./assets/images/clocker/app_icon-dark.png">
+                        </picture>
+                        <p class="caption pb-24">New Clocker app icon</p>
                         <p class="pb-40 txt-primary">The all new design needed a new good looking app icon to match. After couple of iterations, following is the final version of new app icon that we decided on.<br><br>We found few ways to illustrate the well known features as well new upcoming features on app icon. More than one “seconds” needle indicate the multi time zone feature and mini dots on background layer inidicate the upcoming calendar feature. This was a way for us to give a little bit of meaning and liviness to the app icon.</p>
-                        <img class="pb-40"style="height:auto;" alt="Screenshots of clocker on both dark mode and light mode" width="668px" height="500px" src="./assets/images/clocker/app-icon.png">
                         <div class="divider mb-40"></div>
                         <p class="pb-40 txt-primary">As a designer who never worked on any macOS apps, this was a way for me to learn and execute macOS app design and interaction. The lack of community resources for macOS app design and interactions compared to iPhone and iPad is really surprising, so I decided to open source the designs as a way for me to give back to the community.</p>
                         <iframe class="mb-40" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FGRlentmpJblmP93uJpOAwHn8%2FClocker%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
                         <p class="pb-40 txt-primary">The all new design and features are not implemented yet but I suggest downloading the current version of Clocker on App Store. This will be a life saver when you work with remote teams on multiple timezones.</p>
+                        <div class="divider mb-40"></div>
+                        <p style="text-align: center;"><a href="index.html">Go back home</a></p>
+                        <!-- hold hold hold
+                        <a href="https://apps.apple.com/lk/app/clocker/id1056643111?mt=12" title="Download Clocker for your Mac"><img style="height:auto;" alt="Download on the AppStore" width="144px" src="./assets/images/badge-app_store.png"></a>
+                        -->
                     </div>
                 </div>
         </div>

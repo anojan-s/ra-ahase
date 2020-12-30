@@ -6,6 +6,10 @@
 //-- Article contents
 .article {
 
+    h1, h2, h3 {
+        color: var(--text-primary);
+    }
+    
     h1 {
         font-weight: $bold;
     }
