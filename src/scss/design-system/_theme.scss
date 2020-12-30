@@ -17,7 +17,8 @@ body {
     --text-secondary: #{$grouse};
     --bg-primary: #{$ink};
     --bg-secondary: #{$lead};
-    --icon-primary: #{$memory-lane}; 
+    --icon-primary: #{$memory-lane};
+    --divider: #{rgba(255, 255, 255, 0.1)};
   }
 }
 
@@ -30,8 +31,10 @@ body {
     --bg-primary: #{$spring-rain};
     --bg-secondary: #{$white};
     --icon-primary: #{$bunker};
+    --divider: #{rgba(0, 0, 0, 0.08)};
   }
 }
+
 
 //handling theme transition gracefully
 * {

@@ -16,17 +16,34 @@
         <meta name="msapplication-TileColor" content="#2b5797">
         <meta name="theme-color" content="#ffffff">
 
+        <!-- META tags-->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@anojan_10">
+        <meta name="twitter:title" content="Anojan Sivaranjan">
+        <meta name="twitter:description" content="Portfolio of Anojan Sivaranjan">
+        <meta name="twitter:image" content="./assets/images/meta/portfolio-meta.png">
+
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Anojan Sivaranjan">
+        <meta property="og:description" content="Portfolio of Anojan Sivaranjan">
+        <meta property="og:image" content="./assets/images/meta/portfolio-meta.png">
+        <meta property="og:image:width" content="1024">
+        <meta property="og:image:height" content="673">
+
         <!-- Mobile specific meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="" defer></script>
         
         <!-- stylesheet -->
         <link rel="stylesheet" href="./assets/css/app.min.css" />
     </head>
     <body>
         <!-- Header -->
-        <section class="header my-120">
+        <section class="header mt-120 mb-80">
             <div class="container">
-                <!-- My beautiful face 😎 -->
+                <!-- 😎 -->
                 <div class="col-jmb-10 offset-jmb-1 pb-40">
                     <img style="height:auto;" alt="Portrait image of Anojan" width="268px" height="268px" class="header__avatar" src="./assets/images/avatar.png">
                 </div>
@@ -72,6 +89,22 @@
                 </div>
             </div>
         </section> <!-- ./Header -->
+        <!-- Artciles -->
+        <section class="mb-80">
+            <div class="container">
+                <!-- Article items-->
+                <!-- Clocker -->
+                <div class="article-card col-jmb-10 offset-jmb-1 p-0 mb-56" onclick="location.href='clocker.html';">
+                    <!-- Thumbnail -->
+                    <img alt="Clocker cover image" width="368px" height="192px" src="./assets/images/clocker/cover-dark.png">
+                    <!-- Text -->
+                    <div class="artcile-card__text">
+                        <h3 class="txt-primary pb-12">Clocker: an open source macOS menubar app to plan and organize through timezones</h3>
+                        <p class="label txt-secondary">Backstory of collabrating with the creator of an open source macOS app to rebuild it from groundup.</p>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- ./Articles-->
 
         <!-- Scripts -->
         <script src="./assets/js/app.min.js"></script>
