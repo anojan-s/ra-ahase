@@ -1,4 +1,4 @@
-# rae-ahasa
+# ra-ahase
 Portfolio dedicated for those who adore simplicity 🤍
 
 Code that powers [anojans.com](https://anojans.com)
