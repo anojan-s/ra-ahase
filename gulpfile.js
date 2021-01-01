@@ -10,7 +10,7 @@ const sourcemaps   = require('gulp-sourcemaps');
 const cleanCss     = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
-const imagemin = require('gulp-imagemin');
+const imagemin     = require('gulp-imagemin');
 
 let   htmlSrcFiles = './**/*.html';
 let   scssSrcFiles = './src/scss/**/*.scss';
@@ -121,6 +121,8 @@ gulp.task('build:js', function () {
 // Manual image optimizer task
 gulp.task('imagemin', function() {
   return gulp.src(imgSrcFiles)
-	.pipe(imagemin())
+	.pipe(imagemin([
+    imagemin.optipng({optimizationLevel: 5}),
+  ]))
 	.pipe(gulp.dest(imgDist))
 });
