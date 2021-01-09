@@ -4,7 +4,7 @@
     // Hide navigation mobile
     // temp solution until hamburgers gets implemented
     @include media-breakpoint-down(mb) {
-        display: none;
+        //display: none;
     }
 
     //-- Navigation menu wrapper
@@ -42,6 +42,10 @@
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
+        }
+
+        @include media-breakpoint-down(mb) {
+            display: none;
         }
 
         // Link styles
