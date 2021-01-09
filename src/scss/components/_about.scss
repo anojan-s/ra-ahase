@@ -1,0 +1,6 @@
+.portrait{
+    @include media-breakpoint-down(mb) {
+        width: 100%;
+    }
+}
+

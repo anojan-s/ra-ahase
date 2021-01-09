@@ -1,0 +1,30 @@
+.button {
+    border-radius: 24px;
+    background: var(--bg-secondary);
+    color: var(--text-primary); 
+    border: 0;
+    //font styles
+    font-family: $font-family-sans-serif;
+    font-weight: $regular;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: -0.13px;
+
+    :hover{
+        background: var(--accent);
+    }
+
+    &--small{
+        height: 32px;
+        padding: 4px 24px;
+    }
+
+    &--large{
+        height: 40px;
+        padding: 8px 24px;
+    }
+}
+
+.button:hover{
+    color: var(--accent);
+}

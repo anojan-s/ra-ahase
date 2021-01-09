@@ -24,6 +24,7 @@ p {
 
     &__glyphs {
         display: flex;
+        align-items: center;
 
         svg{
             fill: var(--icon-primary);
@@ -31,5 +32,11 @@ p {
         svg:hover{
             fill: var(--accent);
         }
+    }
+
+    &__glyphs-item {
+        width: 20px;
+        height: 20px;
+        margin: 0px 20px 0px 0px;
     }
 }
