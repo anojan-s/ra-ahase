@@ -1,0 +1,29 @@
+footer{
+    background-color: var(--bg-secondary);
+}
+
+.footer{
+
+    &--wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+
+        // specification for mobile breakpoint
+        @include media-breakpoint-down(mb) {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 0px;
+            height: 84px;
+        }
+    }
+
+    &--right{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}

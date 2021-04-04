@@ -71,72 +71,88 @@
         </div>
         <!-- Article -->
         <div class="container">
-                <div class="article article-wrapper col-jmb-7 offset-jmb-2 col-dt-8 offset-dt-2">
-                    <!-- Title -->
-                    <h1 class="article__title pb-16">Designing queue-based interaction: How we helped Ops to get to 100%</h1>
-                    <!-- Subtitle -->
-                    <p class="article__subtitle txt-secondary pb-16">Building tools which makes Operations team feel powerful</p>
-                    <!-- Posted date -->
-                    <p class="label txt-secondary pb-40">Posted Feb 7, 2021</p>
-                    <!-- Divider -->
-                    <div class="divider"></div>
-                    <!-- Article Content -->
-                    <div class="py-40">
-                        <!-- Content section 1 -->
-                        <p class="pb-40 txt-primary">Each awesome operations teams at <a target="_blank" rel="noopener" href="https://different.com.au">:Different</a> has their own set of goals and most of them relies on getting to 100% (or to 0%) fastest. This is all about checking things off as soon and fast as possible. Currently, our tools doesn’t make this easy.<br><br>For an example, Maintenance Ops team at :Different uses Admin (our internal tool) to keep track of all the maintenance requests submitted by tenants. Requests are shown in a table, where the information is limited, and we can only see a small number of characters, and no media that relate to the request. That means for every request, we have to click to view, then click to go back or right click again to open in a new tab. Each day, all four Maintenance Ops team members do this for about 20-30 requests/day. In addition, they may also have to move to other tabs within Admin to find tenant or owner contact details so that they can have a conversation. In a day, these repetitive tasks take up at least 1 hour of every team member’s day.<br><br>A queue is the ideal system to handle this. Ultimately, what we build should make the Ops team feel powerful and that comes from speed and features.</p>
-                        <!-- What is a queue? -->
-                        <h3 class="pb-16">What is a queue?</h3>
-                        <p class="pb-40 txt-primary">A queue has no end, and we should be able to rotate through it. The goal is always to have nothing left in the queue. We want to complete each thing one by one or skip and move to next.</p>
-                        <!-- Co-designing with Ops -->
-                        <h3 class="pb-16">Co-designing with Ops</h3>
-                        <p class="pb-40 txt-primary">A queue will introduce a completely new interaction pattern, so we co-designed it with Ops so that we can make sure what we design is actually usable. To collect feedback, we tested each iterations with every Ops team member who’ll actually use it to get their work done and relying on their opinion when we struggle to make a final call. Their experience let us see where our ideas weren’t quite right, and iterate the design to improve the experience.</p>
-                        <!-- Content section 2 -->
-                        <!-- Queue in all it's glory -->
-                        <h3 class="pb-16">Queue in all it’s glory ✨</h3>
-                        <p class="pb-40 txt-primary">In a queue we want to complete each thing one by one, so every element in a queue should have:<br>• Full and complete information<br>• A clear set of actions that can be taken<br>• The ability to take the appropriate action and move to next or the ability to skip and move to next<br>With this we were able to define the core structures of a queue-based interaction.</p>
-                        <picture>
-                            <img class="pb-12" style="height:auto;" alt="Screenshot of a queue interface" width="668px" height="352px" src="./assets/images/queue/queue-example.png" loading="lazy">
-                        </picture>
-                        <p class="caption pb-40">Queue of maintenance requests</p>
-                        <!-- Queue groups -->
-                        <p class="pb-40 txt-primary">Groups are used in queues to group similar items together as well as to separate different types of queue items. A queue can be built with or without queue groups. Selecting the group loads the queue of items.</p>
-                        <picture>
-                            <img class="pb-12" style="height:auto;" alt="Screenshot of queue group component" width="668px" height="352px" src="./assets/images/queue/queue-groups.png" loading="lazy">
-                        </picture>
-                        <p class="caption pb-40">Queue groups</p>
-                        <!-- Actions -->
-                        <p class="pb-40 txt-primary">Each item in a queue will have a clear set of actions that can be taken. Depending on the type of action, Ops will be automatically taken to the next one in the queue after the action is performed.</p>
-                        <picture>
-                            <img class="pb-12" style="height:auto;" alt="Screenshot of title and actions of the active item in queue" width="668px" height="352px" src="./assets/images/queue/actions.png" loading="lazy">
-                        </picture>
-                        <p class="caption pb-40">Title and actions of the active item in queue</p>
-                        <!-- Queue controls -->
-                        <p class="pb-40 txt-primary">Queue control provides the ability for Ops to iterate through the queue of items as well as to change the behaviour and filter the queue according to their needs.</p>
-                        <picture>
-                            <img class="pb-12" style="height:auto;" alt="Screenshot of queue filter dropdown" width="668px" height="352px" src="./assets/images/queue/filter.png" loading="lazy">
-                        </picture>
-                        <p class="caption pb-40">Queue filter dropdown</p>
-                        <!-- Canvas -->
-                        <p class="pb-40 txt-primary">Canvas is the place where full and complete information of the active item in the queue displayed.</p>
-                        <picture>
-                            <img class="pb-12" style="height:auto;" alt="Screenshot of queue canvas" width="668px" height="352px" src="./assets/images/queue/canvas.png" loading="lazy">
-                        </picture>
-                        <p class="caption pb-40">Canvas of a queue</p>
-                        <div class="divider mb-40"></div>
-                        <!-- Results -->
-                        <h3 class="pb-16">Ops 😍 it</h3>
-                        <p class="pb-40 txt-primary">With the way we designed and built the fundamentals of the queue, we were able to build queues for different teams in matter of time. Within just 4 months of introducing the pattern we already have three different queues currently used by Ops.<br><br>Queue has improved the Ops team’s ability to focus on the task in hand and build better process to improve the workflow and speed.  Seeing these messages from our awesome Ops team memebers make me proud of the impact my work had.</p>
-                        <picture>
-                            <img class="pb-40" style="height:auto;" alt="Screenshot of slack messages" width="668px" height="352px" src="./assets/images/queue/results.png" loading="lazy">
-                        </picture>
-                        <div class="divider mb-40"></div>
-                        <!-- Team credits -->
-                        <p class="pb-40 txt-primary">I worked with some amazing people on this product update and without them nothing would have been possible. Shout out to our awesome <a target="_blank" rel="noopener"  href="https://different.lk/team.html">engineering team</a> for building this complex product without compromising quality and performance, <a target="_blank" rel="noopener" href="https://twitter.com/minarad">Mina Radhakrishnan</a> for spearheading the product idea and <a target="_blank" rel="noopener" href="https://twitter.com/kellytdesign">Kelly Tomlinson</a> for being an awesome design manager. All these is a result of great teamwork.</p>
-                        <div class="divider mb-40"></div>
-                        <p style="text-align: center;"><a href="index.html">Go back home</a></p>
+            <div class="article article-wrapper col-jmb-7 offset-jmb-2 col-dt-8 offset-dt-2">
+                <!-- Title -->
+                <h1 class="article__title pb-16">Designing queue-based interaction: How we helped Ops to get to 100%</h1>
+                <!-- Subtitle -->
+                <p class="article__subtitle txt-secondary pb-16">Building tools which makes Operations team feel powerful</p>
+                <!-- Posted date -->
+                <p class="label txt-secondary pb-40">Posted Feb 7, 2021</p>
+                <!-- Divider -->
+                <div class="divider"></div>
+                <!-- Article Content -->
+                <div class="py-40">
+                    <!-- Content section 1 -->
+                    <p class="pb-40 txt-primary">Each awesome operations teams at <a target="_blank" rel="noopener" href="https://different.com.au">:Different</a> has their own set of goals and most of them relies on getting to 100% (or to 0%) fastest. This is all about checking things off as soon and fast as possible. Currently, our tools doesn’t make this easy.<br><br>For an example, Maintenance Ops team at :Different uses Admin (our internal tool) to keep track of all the maintenance requests submitted by tenants. Requests are shown in a table, where the information is limited, and we can only see a small number of characters, and no media that relate to the request. That means for every request, we have to click to view, then click to go back or right click again to open in a new tab. Each day, all four Maintenance Ops team members do this for about 20-30 requests/day. In addition, they may also have to move to other tabs within Admin to find tenant or owner contact details so that they can have a conversation. In a day, these repetitive tasks take up at least 1 hour of every team member’s day.<br><br>A queue is the ideal system to handle this. Ultimately, what we build should make the Ops team feel powerful and that comes from speed and features.</p>
+                    <!-- What is a queue? -->
+                    <h3 class="pb-16">What is a queue?</h3>
+                    <p class="pb-40 txt-primary">A queue has no end, and we should be able to rotate through it. The goal is always to have nothing left in the queue. We want to complete each thing one by one or skip and move to next.</p>
+                    <!-- Co-designing with Ops -->
+                    <h3 class="pb-16">Co-designing with Ops</h3>
+                    <p class="pb-40 txt-primary">A queue will introduce a completely new interaction pattern, so we co-designed it with Ops so that we can make sure what we design is actually usable. To collect feedback, we tested each iterations with every Ops team member who’ll actually use it to get their work done and relying on their opinion when we struggle to make a final call. Their experience let us see where our ideas weren’t quite right, and iterate the design to improve the experience.</p>
+                    <!-- Content section 2 -->
+                    <!-- Queue in all it's glory -->
+                    <h3 class="pb-16">Queue in all it’s glory ✨</h3>
+                    <p class="pb-40 txt-primary">In a queue we want to complete each thing one by one, so every element in a queue should have:<br>• Full and complete information<br>• A clear set of actions that can be taken<br>• The ability to take the appropriate action and move to next or the ability to skip and move to next<br>With this we were able to define the core structures of a queue-based interaction.</p>
+                    <picture>
+                        <img class="pb-12" style="height:auto;" alt="Screenshot of a queue interface" width="668px" height="352px" src="./assets/images/queue/queue-example.png" loading="lazy">
+                    </picture>
+                    <p class="caption pb-40">Queue of maintenance requests</p>
+                    <!-- Queue groups -->
+                    <p class="pb-40 txt-primary">Groups are used in queues to group similar items together as well as to separate different types of queue items. A queue can be built with or without queue groups. Selecting the group loads the queue of items.</p>
+                    <picture>
+                        <img class="pb-12" style="height:auto;" alt="Screenshot of queue group component" width="668px" height="352px" src="./assets/images/queue/queue-groups.png" loading="lazy">
+                    </picture>
+                    <p class="caption pb-40">Queue groups</p>
+                    <!-- Actions -->
+                    <p class="pb-40 txt-primary">Each item in a queue will have a clear set of actions that can be taken. Depending on the type of action, Ops will be automatically taken to the next one in the queue after the action is performed.</p>
+                    <picture>
+                        <img class="pb-12" style="height:auto;" alt="Screenshot of title and actions of the active item in queue" width="668px" height="352px" src="./assets/images/queue/actions.png" loading="lazy">
+                    </picture>
+                    <p class="caption pb-40">Title and actions of the active item in queue</p>
+                    <!-- Queue controls -->
+                    <p class="pb-40 txt-primary">Queue control provides the ability for Ops to iterate through the queue of items as well as to change the behaviour and filter the queue according to their needs.</p>
+                    <picture>
+                        <img class="pb-12" style="height:auto;" alt="Screenshot of queue filter dropdown" width="668px" height="352px" src="./assets/images/queue/filter.png" loading="lazy">
+                    </picture>
+                    <p class="caption pb-40">Queue filter dropdown</p>
+                    <!-- Canvas -->
+                    <p class="pb-40 txt-primary">Canvas is the place where full and complete information of the active item in the queue displayed.</p>
+                    <picture>
+                        <img class="pb-12" style="height:auto;" alt="Screenshot of queue canvas" width="668px" height="352px" src="./assets/images/queue/canvas.png" loading="lazy">
+                    </picture>
+                    <p class="caption pb-40">Canvas of a queue</p>
+                    <div class="divider mb-40"></div>
+                    <!-- Results -->
+                    <h3 class="pb-16">Ops 😍 it</h3>
+                    <p class="pb-40 txt-primary">With the way we designed and built the fundamentals of the queue, we were able to build queues for different teams in matter of time. Within just 4 months of introducing the pattern we already have three different queues currently used by Ops.<br><br>Queue has improved the Ops team’s ability to focus on the task in hand and build better process to improve the workflow and speed.  Seeing these messages from our awesome Ops team memebers make me proud of the impact my work had.</p>
+                    <picture>
+                        <img class="pb-40" style="height:auto;" alt="Screenshot of slack messages" width="668px" height="352px" src="./assets/images/queue/results.png" loading="lazy">
+                    </picture>
+                    <div class="divider mb-40"></div>
+                    <!-- Team credits -->
+                    <p class="pb-40 txt-primary">I worked with some amazing people on this product update and without them nothing would have been possible. Shout out to our awesome <a target="_blank" rel="noopener"  href="https://different.lk/team.html">engineering team</a> for building this complex product without compromising quality and performance, <a target="_blank" rel="noopener" href="https://twitter.com/minarad">Mina Radhakrishnan</a> for spearheading the product idea and <a target="_blank" rel="noopener" href="https://twitter.com/kellytdesign">Kelly Tomlinson</a> for being an awesome design manager. All these is a result of great teamwork.</p>
+                    <div class="divider mb-40"></div>
+                    <p style="text-align: center;"><a href="index.html">Go back home</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer--wrapper col-jmb-10 offset-jmb-1">
+                    <div class="footer--left">
+                        <span class="label txt-primary">Portfolio dedicated for those who adore simplicity 🖤</span>
+                    </div>
+                    <div class="footer--right">
+                        <a class="label txt-secondary pr-8 " target="_blank" rel="noopener" href="https://github.com/anojan-s/ra-ahase" data-splitbee-event="External link" data-splitbee-event-type="ra-ahase">Find code that powers this site</a>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99908 0.493654C4.47773 0.493654 0 4.97077 0 10.494C0 14.9121 2.86504 18.66 6.83876 19.9823C7.33908 20.0744 7.52141 19.7656 7.52141 19.5004C7.52141 19.2628 7.51282 18.6342 7.50791 17.7999C4.72636 18.404 4.13948 16.4592 4.13948 16.4592C3.68458 15.3038 3.02895 14.9962 3.02895 14.9962C2.121 14.3762 3.09771 14.3885 3.09771 14.3885C4.10142 14.4591 4.62936 15.4192 4.62936 15.4192C5.52135 16.9472 6.97014 16.5058 7.53983 16.2498C7.63069 15.604 7.88913 15.1632 8.17459 14.9134C5.95414 14.6611 3.61951 13.8028 3.61951 9.97092C3.61951 8.87942 4.00934 7.98621 4.64901 7.2876C4.54588 7.03467 4.20271 6.01745 4.74723 4.64111C4.74723 4.64111 5.58642 4.37223 7.49685 5.66631C8.2943 5.44408 9.15007 5.33358 10.0003 5.32928C10.8499 5.33358 11.7051 5.44408 12.5038 5.66631C14.413 4.37223 15.2509 4.64111 15.2509 4.64111C15.7967 6.01745 15.4535 7.03467 15.351 7.2876C15.9919 7.98621 16.3786 8.87942 16.3786 9.97092C16.3786 13.8127 14.0403 14.658 11.8131 14.9054C12.1716 15.2142 12.4915 15.8244 12.4915 16.7569C12.4915 18.0939 12.4792 19.1726 12.4792 19.5004C12.4792 19.768 12.6597 20.0793 13.1668 19.9817C17.1374 18.6563 20 14.9109 20 10.494C20 4.97077 15.5223 0.493654 9.99908 0.493654Z" fill="#8B949E"/>
+                        </svg>                              
                     </div>
                 </div>
-        </div>
+            </div>
+        </footer> <!-- ./Footer -->
         <!-- Scripts -->
         <script src="./assets/js/app.min.js"></script>
     </body>
