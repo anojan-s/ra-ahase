@@ -32,6 +32,6 @@
     "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
-    "yargs-parser": "^20.2.4"
+    "yargs-parser": "^20.2.7"
   }
 }
