@@ -3,14 +3,14 @@
 // Required gulp plugins
 const gulp         = require('gulp');
 const browsersync  = require('browser-sync').create();
-const sass         = require('gulp-sass');
+const sass         = require('gulp-sass')(require('sass'));
 const concat       = require('gulp-concat');
 const minify       = require('gulp-minify');
 const sourcemaps   = require('gulp-sourcemaps');
 const cleanCss     = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename       = require('gulp-rename');
-const imagemin     = require('gulp-imagemin');
+// const imagemin     = require('gulp-imagemin');
 
 let   htmlSrcFiles = './**/*.html';
 let   scssSrcFiles = './src/scss/**/*.scss';
@@ -119,10 +119,11 @@ gulp.task('build:js', function () {
 });
 
 // Manual image optimizer task
-gulp.task('imagemin', function() {
+// Deprecating due to security issues
+/* gulp.task('imagemin', function() {
   return gulp.src(imgSrcFiles)
 	.pipe(imagemin([
     imagemin.optipng({optimizationLevel: 5}),
   ]))
 	.pipe(gulp.dest(imgDist))
-});
+}); */
