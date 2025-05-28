@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape with Text - Color Testing Prototype</title>
+    <link rel="stylesheet" href="./assets/shape-wText/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Shape with Text - Color Testing Prototype</h1>
+            <p>Testing different methods to determine text color inside drawn shapes</p>
+        </header>
+
+        <!-- Section 1: White Background -->
+        <section class="section section-white" data-section="white">
+            <div class="shapes-container">
+                <div class="shape-group">
+                    <div class="opacity-label">100%</div>
+                    <div class="shape" data-shape-id="shape-1-100">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#dc7700">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="100">
+                            <span class="opacity-value">100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">75%</div>
+                    <div class="shape" data-shape-id="shape-1-75">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#dc7700">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="75">
+                            <span class="opacity-value">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">50%</div>
+                    <div class="shape" data-shape-id="shape-1-50">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#dc7700">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="50">
+                            <span class="opacity-value">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">25%</div>
+                    <div class="shape" data-shape-id="shape-1-25">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#dc7700">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="25">
+                            <span class="opacity-value">25%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">0%</div>
+                    <div class="shape" data-shape-id="shape-1-0">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#dc7700">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="0">
+                            <span class="opacity-value">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Light Yellow Background -->
+        <section class="section section-yellow" data-section="yellow">
+            <div class="shapes-container">
+                <div class="shape-group">
+                    <div class="opacity-label">100%</div>
+                    <div class="shape" data-shape-id="shape-2-100">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#625e53">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="100">
+                            <span class="opacity-value">100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">75%</div>
+                    <div class="shape" data-shape-id="shape-2-75">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#625e53">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="75">
+                            <span class="opacity-value">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">50%</div>
+                    <div class="shape" data-shape-id="shape-2-50">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#625e53">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="50">
+                            <span class="opacity-value">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">25%</div>
+                    <div class="shape" data-shape-id="shape-2-25">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#625e53">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="25">
+                            <span class="opacity-value">25%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">0%</div>
+                    <div class="shape" data-shape-id="shape-2-0">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#625e53">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="0">
+                            <span class="opacity-value">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Dark Grey Background -->
+        <section class="section section-grey" data-section="grey">
+            <div class="shapes-container">
+                <div class="shape-group">
+                    <div class="opacity-label">100%</div>
+                    <div class="shape" data-shape-id="shape-3-100">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#4cd575">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="100">
+                            <span class="opacity-value">100%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">75%</div>
+                    <div class="shape" data-shape-id="shape-3-75">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#4cd575">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="75">
+                            <span class="opacity-value">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">50%</div>
+                    <div class="shape" data-shape-id="shape-3-50">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#4cd575">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="50">
+                            <span class="opacity-value">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">25%</div>
+                    <div class="shape" data-shape-id="shape-3-25">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#4cd575">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="25">
+                            <span class="opacity-value">25%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shape-group">
+                    <div class="opacity-label">0%</div>
+                    <div class="shape" data-shape-id="shape-3-0">
+                        <span class="shape-text">Sample Text</span>
+                    </div>
+                    <div class="shape-controls">
+                        <div class="control-group">
+                            <label>Color:</label>
+                            <input type="color" class="color-picker" value="#4cd575">
+                        </div>
+                        <div class="control-group">
+                            <label>Fill:</label>
+                            <input type="checkbox" class="fill-toggle" checked>
+                        </div>
+                        <div class="control-group opacity-control">
+                            <label>Opacity:</label>
+                            <input type="range" class="opacity-slider" min="0" max="100" value="0">
+                            <span class="opacity-value">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./assets/shape-wText/script.js"></script>
+</body>
+</html> 

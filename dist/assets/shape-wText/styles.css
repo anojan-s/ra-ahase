@@ -1,0 +1,218 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    padding: 2rem;
+    text-align: left;
+    background: white;
+    color: black;
+    max-width: 1168px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+/* Sections */
+.section {
+    flex: 1;
+    padding: 3rem 2rem;
+}
+
+/* Section backgrounds */
+.section-white {
+    background-color: #ffffff;
+}
+
+.section-yellow {
+    background-color: #F8F7EB;
+}
+
+.section-grey {
+    background-color: #333333;
+    color: white;
+}
+
+/* Shapes container */
+.shapes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1168px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.shape-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Opacity labels */
+.opacity-label {
+    font-size: 0.75rem;
+    color: #999;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.section-grey .opacity-label {
+    color: #ccc;
+}
+
+/* Shape styling */
+.shape {
+    width: 200px;
+    height: 120px;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: white;
+    cursor: pointer;
+}
+
+.shape:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.shape-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: black;
+    text-align: center;
+    pointer-events: none;
+    text-shadow: none;
+}
+
+/* Shape controls */
+.shape-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 200px;
+}
+
+.section-grey .shape-controls {
+    background: white;
+    color: black;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.control-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    min-width: 60px;
+}
+
+.color-picker {
+    width: 40px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fill-toggle {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: black;
+}
+
+.opacity-slider {
+    width: 100px;
+    height: 6px;
+    border-radius: 3px;
+    background: #ddd;
+    outline: none;
+    cursor: pointer;
+    accent-color: black;
+}
+
+.opacity-value {
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-width: 35px;
+    text-align: right;
+}
+
+.opacity-control {
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.opacity-control.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .shapes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    header {
+        padding: 1.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .shape {
+        width: 250px;
+    }
+} 
