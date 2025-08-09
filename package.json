@@ -15,6 +15,9 @@
   ],
   "author": "anojan sivaranjan",
   "license": "ISC",
+  "engines": {
+    "node": ">=22"
+  },
   "bugs": {
     "url": "https://github.com/anojan-s/rae-ahasa/issues"
   },
